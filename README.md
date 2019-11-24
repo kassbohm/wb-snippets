@@ -1,8 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# tm-snippets
+# wb-snippets
 
- *tm-snippets* is a collection of Python snippets for some TM-tasks
+ *wb-snippets* is a collection of Python snippets for some WB-tasks
 
 ## Usage
 
