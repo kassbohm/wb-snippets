@@ -3,9 +3,8 @@ M,l,EI = var("M,l,EI")
 sub_list=[
     ( M,   10 *Newton*m              ),
     ( l,    1 *m                     ),
-    ( EI, 200*GPa * 2*mm*6*mm**2/ 12 ),
+    ( EI, 200*GPa * 2*mm*6*mm**3/ 12 ),
     ]
-
 l2 = l*l
 l3 = l*l*l
 
@@ -37,6 +36,7 @@ F2 = sol[F2]
 
 pprint("\nM1 / Nm:")
 tmp = M1
+pprint(tmp)
 tmp = tmp.subs(sub_list)
 tmp /= Newton*m
 tmp = iso_round(tmp,1)
