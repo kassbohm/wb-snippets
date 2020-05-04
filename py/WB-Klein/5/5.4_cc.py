@@ -108,12 +108,20 @@ pprint(sol)
 
 u2x, u3x = sol[u2x], sol[u3x]
 
-tmp = u2x.subs(sub_list)
 pprint("\nu2x:")
+tmp = u2x.subs(sub_list)
 pprint(N(tmp,4))
-tmp = u3x.subs(sub_list)
+
 pprint("\nu3x:")
+tmp = u3x.subs(sub_list)
 pprint(N(tmp,4))
+
+pprint("\nF1x:")
+tmp = - EA/l * u2x/2
+tmp = tmp.subs(sub_list)
+tmp /= Newton
+pprint(tmp)
+
 
 # k1 / (EA / l):
 # ⎡1/2   -1/2  -1/2  1/2 ⎤
