@@ -1,4 +1,4 @@
-EA, l, F1, F2 = var("EA, l, F1, F2")
+llEA, l, F1, F2 = var("EA, l, F1, F2")
 
 sub_list = [
     ( EA,  2 *Pa*m**2 ),
@@ -106,3 +106,6 @@ pprint(tmp)
 #
 # u3x:
 # 0.8⋅m
+# 
+# F1x:
+# -7/10
