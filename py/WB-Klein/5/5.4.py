@@ -54,15 +54,17 @@ pprint(sol)
 
 u2x, u3x = sol[u2x], sol[u3x]
 
-pprint("\nu2x:")
+pprint("\nu2x / m:")
 tmp = u2x.subs(sub_list)
-pprint(N(tmp,4))
+tmp /= m
+pprint(tmp)
 
-pprint("\nu3x:")
+pprint("\nu3x / m:")
 tmp = u3x.subs(sub_list)
-pprint(N(tmp,4))
+tmp /= m
+pprint(tmp)
 
-pprint("\nF1x:")
+pprint("\nF1x / N:")
 tmp = - EA/l * u2x/2
 tmp = tmp.subs(sub_list)
 tmp /= Newton
