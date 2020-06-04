@@ -57,8 +57,8 @@ llEA, l, F1, F2 = var("EA, l, F1, F2")
 sub_list = [
     ( EA,  2 *Pa*m**2 ),
     ( l,   1 *m       ),
-    ( F1,  1 *Newton  ),
-    ( F2,  2 *Newton  ),
+    ( F1,  1 *Newton /2  ),
+    ( F2,  2 *Newton /2  ),
     ]
 
 def k(phi):
@@ -81,7 +81,7 @@ def k(phi):
 
 
 (p1, p2, p3) = (135 *pi/180, 0 *pi/180, 45 *pi/180)
-(k1, k2, k3) = (EA/l*k(p1), EA/l*k(p2), EA/l*k(p3))
+(k1, k2, k3) = (EA/l*k(p1), EA/2/l*k(p2), EA/l*k(p3))
 
 pprint("\nk1 / (EA / l): ")
 pprint(k1 / (EA/l) )
@@ -91,13 +91,13 @@ pprint("\nk3 / (EA / l): ")
 pprint(k3 / (EA/l) )
 
 A = EA/l*Matrix([
-    [ S(3)/2 ,  -1 ],
-    [ -1,   S(3)/2 ]
+    [  1     ,  -S(1)/2 ],
+    [ -S(1)/2,       1  ]
     ])
 
 u2x, u3x = var("u2x, u3x")
 u = Matrix([u2x  , u3x  ])
-f = Matrix([F1/2 , F2/2 ])
+f = Matrix([F1 , F2 ])
 
 u2x, u3x = var("u2x, u3x")
 
