@@ -20,7 +20,7 @@ f = Matrix([1*Newton,0,0])
 eq = Eq(K*u , f)
 sol = solve(eq, [w2, p2m, p2p])
 
-pprint("\nSolution:")
+pprint("\nSolution 1:")
 pprint(sol)
 
 # Stiffness matrix / N:
@@ -38,6 +38,7 @@ pprint(sol)
 # ⎩                          9 ⎭
 
 
+pprint("\nSolution 2:")
 A, F = var("A, F")
 EI, l = var("EI, l")
 sub_list = [
@@ -45,7 +46,6 @@ sub_list = [
     (EI, 1*Newton*m**2),
     (l, 1*m),
     ]
-
 
 l2 = l*l
 l3 = l*l*l
@@ -59,11 +59,18 @@ eq4 = Eq( EI/2/l3 * ( -6*l  *pr + 12   * w) , - A + F/2 )
 eqns = [eq1, eq2, eq3, eq4]
 unks = [pl, w, pr, A]
 sol = solve(eqns, unks)
+pprint(sol)
 pl = sol[pl]
 w = sol[w]
 pr = sol[pr]
 A = sol[A]
 
-for s in [pl, w, pr, A]:
+pprint("\nφL, φR / rad:")
+for s in [pl, pr]:
     s = s.subs(sub_list)
     pprint(s)
+
+pprint("\nw / m:")
+w = w.subs(sub_list)
+w /= m
+pprint(w)
