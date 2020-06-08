@@ -1,4 +1,4 @@
-llEA, l, F1, F2 = var("EA, l, F1, F2")
+EA, l, F1, F2 = var("EA, l, F1, F2")
 
 sub_list = [
     ( EA,  2 *Pa*m**2 ),
