@@ -1,3 +1,5 @@
+# https://colab.research.google.com/github/kassbohm/wb-snippets/blob/master/ipynb/TEM_10/ESA/a1.ipynb
+
 from sympy import *
 
 F,l = var("F,l")
