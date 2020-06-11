@@ -7,31 +7,31 @@ R = 3*F/2
 lu = l/sqrt(3)
 
 # Kai
-# Ah,Av,Bh,Bv,Ch,Cv = var("Ah,Av,Bh,Bv,Ch,Cv")
-#
-# e1 = Eq(Ah + Bh + F)
-# e2 = Eq(Av + Bv - R)
-# e3 = Eq(Bv*l - Bh*l - F*l/2 - R*7/18*l)
-#
-# e4 = Eq(Ch - Bh)
-# e5 = Eq(Cv - F - Bv)
-# e6 = Eq(F*lu/2 + Bv*lu + Bh*l)
-#
-# eqs = [e1,e2,e3,e4,e5,e6]
-# unknowns = [Ah,Av,Bh,Bv,Ch,Cv]
+Ah,Av,Bh,Bv,Ch,Cv = var("Ah,Av,Bh,Bv,Ch,Cv")
 
-# Armin:
-Ax,Ay,Bx,By,Gx,Gy = var("Ax,Ay,Bx,By,Gx,Gy")
+e1 = Eq(Ah + Bh + F)
+e2 = Eq(Av + Bv - R)
+e3 = Eq(Bv*l - Bh*l - F*l/2 - R*7/18*l)
 
-e1 = Eq(Ay + Gy - R)
-e2 = Eq(Ax + F - Gx)
-e3 = Eq(F/2 + 7*R/18 - Gy - Gx)
-e4 = Eq(-Gy -F + By)
-e5 = Eq(Gx - Bx)
-e6 = Eq(Gx - sqrt(3)*F/6 - Gy/sqrt(3))
+e4 = Eq(Ch - Bh)
+e5 = Eq(Cv - F - Bv)
+e6 = Eq(F*lu/2 + Bv*lu + Bh*l)
 
 eqs = [e1,e2,e3,e4,e5,e6]
-unknowns = [Ax,Ay,Bx,By,Gx,Gy]
+unknowns = [Ah,Av,Bh,Bv,Ch,Cv]
+
+# # Armin:
+# Ax,Ay,Bx,By,Gx,Gy = var("Ax,Ay,Bx,By,Gx,Gy")
+#
+# e1 = Eq(Ay + Gy - R)
+# e2 = Eq(Ax + F - Gx)
+# e3 = Eq(F/2 + 7*R/18 - Gy - Gx)
+# e4 = Eq(-Gy -F + By)
+# e5 = Eq(Gx - Bx)
+# e6 = Eq(Gx - sqrt(3)*F/6 - Gy/sqrt(3))
+#
+# eqs = [e1,e2,e3,e4,e5,e6]
+# unknowns = [Ax,Ay,Bx,By,Gx,Gy]
 
 
 sol = solve(eqs,unknowns)
