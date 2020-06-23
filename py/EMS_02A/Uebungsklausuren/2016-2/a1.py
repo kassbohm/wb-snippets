@@ -6,3 +6,8 @@ w = a3*x*x*(x - l)
 
 tmp = integrate(w, (x,0,l))
 pprint(tmp)
+
+#      4 
+# -a₃⋅l
+# ───────
+#    12
