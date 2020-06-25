@@ -6,7 +6,6 @@ F,l = var("F,l")
 R = 3*F/2
 lu = l/sqrt(3)
 
-# Kai
 Ah,Av,Bh,Bv,Ch,Cv = var("Ah,Av,Bh,Bv,Ch,Cv")
 
 e1 = Eq(Ah + Bh + F)
@@ -20,7 +19,7 @@ e6 = Eq(F*lu/2 + Bv*lu + Bh*l)
 eqs = [e1,e2,e3,e4,e5,e6]
 unknowns = [Ah,Av,Bh,Bv,Ch,Cv]
 
-# # Armin:
+# Alternative Solution (also correct):
 # Ax,Ay,Bx,By,Gx,Gy = var("Ax,Ay,Bx,By,Gx,Gy")
 #
 # e1 = Eq(Ay + Gy - R)
@@ -43,7 +42,6 @@ for v in  sorted(sol,key=default_sort_key):
     sF = (s/F).simplify()
     pprint([v, sF, N(sF,2)])
 
-# Kai:
 # ⎡      43   19⋅√3       ⎤
 # ⎢Ah, - ── + ─────, -0.42⎥
 # ⎣      24     24        ⎦
@@ -71,36 +69,4 @@ for v in  sorted(sol,key=default_sort_key):
 #
 # ⎡      19⋅√3   23     ⎤
 # ⎢Cv, - ───── + ──, 1.5⎥
-# ⎣        24    8      ⎦
-
-
-# Armin:
-#
-# ⎡      43   19⋅√3       ⎤
-# ⎢Ax, - ── + ─────, -0.42⎥
-# ⎣      24     24        ⎦
-#
-#
-# ⎡      3   19⋅√3     ⎤
-# ⎢Ay, - ─ + ─────, 1.0⎥
-# ⎣      8     24      ⎦
-#
-#
-# ⎡      19   19⋅√3      ⎤
-# ⎢Bx, - ── + ─────, 0.58⎥
-# ⎣      24     24       ⎦
-#
-#
-# ⎡      19⋅√3   23     ⎤
-# ⎢By, - ───── + ──, 1.5⎥
-# ⎣        24    8      ⎦
-#
-#
-# ⎡      19   19⋅√3      ⎤
-# ⎢Gx, - ── + ─────, 0.58⎥
-# ⎣      24     24       ⎦
-#
-#
-# ⎡      19⋅√3   15     ⎤
-# ⎢Gy, - ───── + ──, 0.5⎥
 # ⎣        24    8      ⎦
