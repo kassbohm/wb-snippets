@@ -1,1 +1,1 @@
-/home/kai/A_Proj/Teaching/O-Teach/wb-admin/Hefte/HTM/HTM03/Loesungen_Kai/Selbst/3.3_Fehler_im_Heft/3.3.py
+/home/kai/A_Proj/Teaching/O-Teach/wb-admin/Hefte/HTM/HTM03/Loesungen_Kai/Selbst/3.3/3.3.py

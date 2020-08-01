@@ -1,1 +1,1 @@
-/home/kai/A_Proj/Teaching/O-Teach/wb-admin/Hefte/HTM/HTM03/Loesungen_Kai/Selbst/4.1_Fehler_im_Heft_anderes_Endergebnis/4.1.py
+/home/kai/A_Proj/Teaching/O-Teach/wb-admin/Hefte/HTM/HTM03/Loesungen_Kai/Selbst/4.1/4.1.py
