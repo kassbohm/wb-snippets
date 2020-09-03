@@ -1,9 +1,11 @@
+# Header starts here.
 from sympy.physics.units import *
 from sympy import *
 
 # Rounding:
 import decimal
 from decimal import Decimal as DX
+from copy import deepcopy
 def iso_round(obj, pv, rounding=decimal.ROUND_HALF_EVEN):
     import sympy
     """
@@ -24,14 +26,15 @@ def iso_round(obj, pv, rounding=decimal.ROUND_HALF_EVEN):
         0.000000001,    #  9th
         0.0000000001,   # 10th
         ])
+    objc = deepcopy(obj)
     try:
-        tmp = DX(str(float(obj)))
-        obj = tmp.quantize(DX(str(pv)), rounding=rounding)
+        tmp = DX(str(float(objc)))
+        objc = tmp.quantize(DX(str(pv)), rounding=rounding)
     except:
-        for i in range(len(obj)):
-            tmp = DX(str(float(obj[i])))
-            obj[i] = tmp.quantize(DX(str(pv)), rounding=rounding)
-    return obj
+        for i in range(len(objc)):
+            tmp = DX(str(float(objc[i])))
+            objc[i] = tmp.quantize(DX(str(pv)), rounding=rounding)
+    return objc
 
 # LateX:
 kwargs = {}
@@ -50,9 +53,9 @@ kN     = k*Newton
 
 half = S(1)/2
 
-# ---
-
-llEA, l, F1, F2 = var("EA, l, F1, F2")
+# Header ends here.
+#
+EA, l, F1, F2 = var("EA, l, F1, F2")
 
 sub_list = [
     ( EA,  2 *Pa*m**2 ),
@@ -80,7 +83,7 @@ def k(phi):
         ])
 
 
-(p1, p2, p3) = (135 *pi/180, 0 *pi/180, 45 *pi/180)
+(p1, p2, p3) = (315*pi/180, 0 *pi/180, 45 *pi/180)
 (k1, k2, k3) = (EA/l*k(p1), EA/2/l*k(p2), EA/l*k(p3))
 
 pprint("\nk1 / (EA / l): ")
