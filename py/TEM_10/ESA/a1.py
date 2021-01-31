@@ -42,6 +42,8 @@ for v in  sorted(sol,key=default_sort_key):
     sF = (s/F).simplify()
     pprint([v, sF, N(sF,2)])
 
+# Reactions / F:
+#
 # ⎡      43   19⋅√3       ⎤
 # ⎢Ah, - ── + ─────, -0.42⎥
 # ⎣      24     24        ⎦
