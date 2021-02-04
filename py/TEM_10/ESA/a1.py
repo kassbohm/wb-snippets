@@ -16,6 +16,8 @@ e4 = Eq(Ch - Bh)
 e5 = Eq(Cv - F - Bv)
 e6 = Eq(F*lu/2 + Bv*lu + Bh*l)
 
+pprint(e6)
+
 eqs = [e1,e2,e3,e4,e5,e6]
 unknowns = [Ah,Av,Bh,Bv,Ch,Cv]
 
@@ -39,8 +41,10 @@ pprint("Reactions / F:")
 for v in  sorted(sol,key=default_sort_key):
     pprint("\n\n")
     s = sol[v]
-    sF = (s/F).simplify()
-    pprint([v, sF, N(sF,2)])
+    tmp = (s/F)
+    tmp = tmp.simplify()
+    pprint(tmp)
+    pprint([v, tmp, N(tmp,3)])
 
 # Reactions / F:
 #
