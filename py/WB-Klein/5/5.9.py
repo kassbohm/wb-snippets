@@ -12,7 +12,7 @@ sub_list = [
 l2 = l*l
 l3 = l*l*l
 
-pl, w, pr, A = var("phi_l, w, phi_r, A")
+pl, w, pr, A = var("psi_l, w, psi_r, A")
 
 eq1 = Eq( EI/l3   * (  4*l2 *pl +  6*l * w) , 0 )
 eq2 = Eq( EI/l3   * (  6*l  *pl + 12   * w) , + A + F/2 )
@@ -27,7 +27,7 @@ w = sol[w]
 pr = sol[pr]
 A = sol[A]
 
-pprint("\nφL, φR / rad:")
+pprint("\nψₗ, ψᵣ / rad:")
 for s in [pl, pr]:
     s = s.subs(sub_list)
     pprint(s)
@@ -51,10 +51,10 @@ K *= Matrix([
 [ -3*l,   0,  2*l2  ],
 ])
 
-pprint("\nStiffness matrix / N:")
-pprint(K/Newton)
+# pprint("\nStiffness matrix / N:")
+# pprint(K/Newton)
 
-w2, p2m, p2p = var("w2, p2m, p2p")
+w2, p2m, p2p = var("w₂, ψ₂⁻, ψ₂⁺")
 u = Matrix([w2, p2m, p2p])
 f = Matrix([1*Newton,0,0])
 
