@@ -44,12 +44,13 @@ kwargs["mat_delim"] = ""
 
 # Units:
 (k, M, G ) = ( 10**3, 10**6, 10**9 )
-(mm, cm, deg) = ( m/1000, m/100, pi/180)
+(mm, cm) = ( m/1000, m/100 )
 Newton = kg*m/s**2
 Pa     = Newton/m**2
 MPa    = M*Pa
 GPa    = G*Pa
 kN     = k*Newton
+deg    = pi/180
 
 half = S(1)/2
 

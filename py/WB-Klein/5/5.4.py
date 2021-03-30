@@ -42,6 +42,8 @@ A = EA/l*Matrix([
     [ -S(1)/2,       1  ]
     ])
 
+
+
 u2x, u3x = var("u2x, u3x")
 u = Matrix([u2x  , u3x  ])
 f = Matrix([F1 , F2 ])
