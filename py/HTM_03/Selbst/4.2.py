@@ -1,1 +1,1 @@
-/home/kai/A_Proj/Teaching/O-Teach/wb-admin/Hefte/HTM/HTM03/Loesungen_Kai/Selbst/4.2/4.2.py
+/home/kai/A_Sphinx/Teach/dyn.tm-tutor.de/source/HTM03/4/4.2/4.2.py
