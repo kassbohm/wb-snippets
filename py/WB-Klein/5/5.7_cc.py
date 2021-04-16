@@ -1,9 +1,11 @@
+# Header starts here.
 from sympy.physics.units import *
 from sympy import *
 
 # Rounding:
 import decimal
 from decimal import Decimal as DX
+from copy import deepcopy
 def iso_round(obj, pv, rounding=decimal.ROUND_HALF_EVEN):
     import sympy
     """
@@ -24,14 +26,15 @@ def iso_round(obj, pv, rounding=decimal.ROUND_HALF_EVEN):
         0.000000001,    #  9th
         0.0000000001,   # 10th
         ])
+    objc = deepcopy(obj)
     try:
-        tmp = DX(str(float(obj)))
-        obj = tmp.quantize(DX(str(pv)), rounding=rounding)
+        tmp = DX(str(float(objc)))
+        objc = tmp.quantize(DX(str(pv)), rounding=rounding)
     except:
-        for i in range(len(obj)):
-            tmp = DX(str(float(obj[i])))
-            obj[i] = tmp.quantize(DX(str(pv)), rounding=rounding)
-    return obj
+        for i in range(len(objc)):
+            tmp = DX(str(float(objc[i])))
+            objc[i] = tmp.quantize(DX(str(pv)), rounding=rounding)
+    return objc
 
 # LateX:
 kwargs = {}
@@ -41,17 +44,18 @@ kwargs["mat_delim"] = ""
 
 # Units:
 (k, M, G ) = ( 10**3, 10**6, 10**9 )
-(mm, cm, deg) = ( m/1000, m/100, pi/180)
+(mm, cm) = ( m/1000, m/100 )
 Newton = kg*m/s**2
 Pa     = Newton/m**2
 MPa    = M*Pa
 GPa    = G*Pa
 kN     = k*Newton
+deg    = pi/180
 
 half = S(1)/2
 
-# ---
-
+# Header ends here.
+#
 M,l,EI = var("M,l,EI")
 
 sub_list=[
@@ -109,6 +113,19 @@ tmp = tmp.subs(sub_list)
 tmp /= Newton
 tmp = iso_round(tmp,1)
 pprint(tmp)
+
+pprint("\nψ₂:")
+tmp = p2
+pprint(tmp)
+pprint(latex(tmp))
+
+pprint("\nψ₂ / rad:")
+tmp = p2
+tmp = tmp.subs(sub_list)
+tmp = iso_round(tmp,1)
+pprint(tmp)
+
+
 
 # M1 / Nm:
 # 5

@@ -56,6 +56,19 @@ tmp /= Newton
 tmp = iso_round(tmp,1)
 pprint(tmp)
 
+pprint("\nψ₂:")
+tmp = p2
+pprint(tmp)
+pprint(latex(tmp))
+
+pprint("\nψ₂ / rad:")
+tmp = p2
+tmp = tmp.subs(sub_list)
+tmp = iso_round(tmp,1)
+pprint(tmp)
+
+
+
 # M1 / Nm:
 # 5
 #
