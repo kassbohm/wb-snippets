@@ -59,7 +59,6 @@ pprint(tmp)
 pprint("\nψ₂:")
 tmp = p2
 pprint(tmp)
-pprint(latex(tmp))
 
 pprint("\nψ₂ / rad:")
 tmp = p2
@@ -67,9 +66,10 @@ tmp = tmp.subs(sub_list)
 tmp = iso_round(tmp,1)
 pprint(tmp)
 
-
-
 # M1 / Nm:
+# M
+# ─
+# 2
 # 5
 #
 # F1 / N:
@@ -77,3 +77,11 @@ pprint(tmp)
 #
 # F2 / N:
 # 15
+#
+# ψ₂:
+# M⋅l
+# ────
+# 4⋅EI
+#
+# ψ₂ / rad:
+# 12
