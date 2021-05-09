@@ -1,1 +1,1 @@
-/home/kai/A_Proj/Teaching/O-Teach/wb-admin/Hefte/TEM/TEM11_Festigkeit/Loesungen_Kai_Selbst/2.7/2.7.py
+/home/kai/A_Sphinx/Teach/tem.tm-tutor.de/source/11/2/2.7/2.7.py
