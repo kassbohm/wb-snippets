@@ -3,8 +3,8 @@ EA, l, F1, F2 = var("EA, l, F1, F2")
 sub_list = [
     ( EA,  2 *Pa*m**2 ),
     ( l,   1 *m       ),
-    ( F1,  1 *Newton /2  ),
-    ( F2,  2 *Newton /2  ),
+    ( F1,  1 *Newton /2  ), # due to symmetry
+    ( F2,  2 *Newton /2  ), # due to symmetry
     ]
 
 def k(phi):
@@ -25,9 +25,8 @@ def k(phi):
         [-sc, -ss,  sc,  ss],
         ])
 
-
-
 (p1, p2, p3) = (315*pi/180, 0 *pi/180, 45 *pi/180)
+# k2 uses only 1/2 A due to symmetry:
 (k1, k2, k3) = (EA/l*k(p1), EA/2/l*k(p2), EA/l*k(p3))
 
 pprint("\nk1 / (EA / l): ")
