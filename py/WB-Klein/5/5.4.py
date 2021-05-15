@@ -36,7 +36,7 @@ pprint(k2 / (EA/l) )
 pprint("\nk3 / (EA / l): ")
 pprint(k3 / (EA/l) )
 
-A = EA/l*Matrix([
+K = EA/l*Matrix([
     [  1     ,  -S(1)/2 ],
     [ -S(1)/2,       1  ]
     ])
@@ -48,7 +48,7 @@ f = Matrix([F1 , F2 ])
 
 u2x, u3x = var("u2x, u3x")
 
-eq = Eq(A*u , f)
+eq = Eq(K*u , f)
 sol = solve(eq, [u2x, u3x])
 pprint("\nSolution:")
 pprint(sol)
