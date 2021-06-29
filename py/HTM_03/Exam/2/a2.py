@@ -1,1 +1,1 @@
-../../../../..//dyn.tm-tutor.de/source/HTM03/Exam/2/A2/a2.py
+../../../../..//dyn.tm-tutor.de/source/Exams/HTM/2/A2/a2.py
