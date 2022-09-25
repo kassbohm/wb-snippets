@@ -1,4 +1,6 @@
 EA, l, F1, F2 = var("EA, l, F1, F2")
+Newton = kg*m/s**2
+Pa     = Newton/m**2
 
 sub_list = [
     ( EA,  2 *Pa*m**2 ),
